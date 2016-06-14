@@ -1,4 +1,4 @@
-require(['js/public/base.js'],function(Base){
+require(['/js/public/base.js'],function(Base){
 	Base.setRequirejs();
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
@@ -43,7 +43,7 @@ require(['js/public/base.js'],function(Base){
 						dataType:'json',
 						success:function(data){
 							alert("注册成功");
-							location.href = "/mobile/login"
+							location.href = "/mobile/login.html"
 						},
 						error:function(){
 							alert("注册失败");
@@ -66,7 +66,7 @@ require(['js/public/base.js'],function(Base){
 						dataType:'json',
 						success:function(data){
 							alert("注册成功");
-							location.href = "/mobile/login"
+							location.href = "/mobile/login.html"
 						},
 						error:function(){
 							alert("注册失败");

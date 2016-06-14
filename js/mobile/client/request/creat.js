@@ -1,4 +1,4 @@
-require(['js/public/base.js'],function(Base){
+require(['/js/public/base.js'],function(Base){
 	Base.setRequirejs();
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
@@ -12,12 +12,12 @@ require(['js/public/base.js'],function(Base){
 					})
 					if(!Helper.islogin()){
 						alert('请先登录');
-						location.href = "/mobile/login";
+						location.href = "/mobile/login.html";
 					}
 					this.user = Helper.getlogin();
 					if(this.user.type!="client"){
 						alert('请先登录客户账号');
-						location.href = "/mobile/login";
+						location.href = "/mobile/login.html";
 					}
 					var temp = _.template(Helper.template.mobileLoginTemplate);
 					$(".nav .vendor").remove();
@@ -25,7 +25,7 @@ require(['js/public/base.js'],function(Base){
 					$("#exit").bind("click",function(e){
 						e.preventDefault();
 						Helper.deletelogin();
-						location.href="mobile/index";
+						location.href="/mobile/index.html";
 					});
 				},
 				el:$("#main"),
@@ -244,7 +244,7 @@ require(['js/public/base.js'],function(Base){
 						},
 						error:function(){
 							alert('获取用户列表失败');
-							location.href = "location/index";
+							location.href = "/mobile/index.html";
 						}
 					});
 				},
@@ -262,7 +262,7 @@ require(['js/public/base.js'],function(Base){
 						data:data,
 						success:function(data){
 							alert("发送成功");
-							location.href = "/mobile/index";
+							location.href = "/mobile/index.html";
 						},
 						error:function(){
 							alert("发送失败");

@@ -1,4 +1,4 @@
-require(['js/public/base.js'],function(Base){
+require(['/js/public/base.js'],function(Base){
 	Base.setRequirejs();
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
@@ -12,12 +12,12 @@ require(['js/public/base.js'],function(Base){
 					})
 					if(!Helper.islogin()){
 						alert('请先登录');
-						location.href = "/mobile/login";
+						location.href = "/mobile/login.html";
 					}
 					this.user = Helper.getlogin();
 					if(this.user.type!="vendor"){
 						alert('请先登录供应商账号');
-						location.href = "/mobile/login";
+						location.href = "/mobile/login.html";
 					}
 					var temp = _.template(Helper.template.mobileLoginTemplate);
 					$(".nav .client").remove();
@@ -25,7 +25,7 @@ require(['js/public/base.js'],function(Base){
 					$("#exit").bind("click",function(e){
 						e.preventDefault();
 						Helper.deletelogin();
-						location.href="mobile/index";
+						location.href="/mobile/index.html";
 					});
 				},
 				el:$("#main"),
@@ -244,7 +244,7 @@ require(['js/public/base.js'],function(Base){
 						success:function(data){
 							selfthis.data = data;
 							alert("发送报价成功");
-							location.href = "/mobile/index";
+							location.href = "/mobile/index.html";
 						},
 						error:function(){
 							alert("发送报价失败");
