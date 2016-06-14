@@ -240,7 +240,7 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242/api/offer",
+						url: "http://121.43.62.242:3000/api/offer",
 						type: "post",
 						data: data,
 						dataType:"json",

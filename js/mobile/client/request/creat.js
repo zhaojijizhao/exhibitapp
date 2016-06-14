@@ -215,7 +215,7 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242/api/exhibit",
+						url: "http://121.43.62.242:3000/api/exhibit",
 						type: "post",
 						data: data,
 						dataType:"json",
@@ -234,7 +234,7 @@ require(['../js/public/base.js'],function(Base){
 					var selfthis = this;
 					var self = this.$el;
 					$.ajax({
-						url: "http://121.43.62.242/api/user/vendorlist",
+						url: "http://121.43.62.242:3000/api/user/vendorlist",
 						type: "get",
 						dataType:"json",
 						success:function(data){
@@ -255,7 +255,7 @@ require(['../js/public/base.js'],function(Base){
 					var data = {
 						exhibit_id:selfthis.data._id
 					};
-					var url = "http://121.43.62.242/api/exhibit/send"+(!!uid?"/byuid/"+uid:"");
+					var url = "http://121.43.62.242:3000/api/exhibit/send"+(!!uid?"/byuid/"+uid:"");
 					$.ajax({
 						url: url,
 						type: "post",

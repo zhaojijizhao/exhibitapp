@@ -35,7 +35,7 @@ require(['../js/public/base.js'],function(Base){
 					var selfthis = this;
 					var page = $("#page").val()||1;
 					$.ajax({
-						url:'http://121.43.62.242/api/exhibit/byuid/'+this.user._id + "/" + page,
+						url:'http://121.43.62.242:3000/api/exhibit/byuid/'+this.user._id + "/" + page,
 						type:'get',
 						dataType:'json',
 						success:function(data){
@@ -68,7 +68,7 @@ require(['../js/public/base.js'],function(Base){
 					//var eid = $(e.currentTarget).attr("eid");
 					var eid = v._id;
 					$.ajax({
-						url:'http://121.43.62.242/api/offer/byexhibit/'+eid,
+						url:'http://121.43.62.242:3000/api/offer/byexhibit/'+eid,
 						type:'get',
 						dataType:'json',
 						success:function(data){

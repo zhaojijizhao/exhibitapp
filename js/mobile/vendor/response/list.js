@@ -36,7 +36,7 @@ require(['../js/public/base.js'],function(Base){
 					var self = this.$el;
 					var page = $("#page").val()||1;
 					$.ajax({
-						url:'http://121.43.62.242/api/offer/byuid/'+this.user._id+'/'+page,
+						url:'http://121.43.62.242:3000/api/offer/byuid/'+this.user._id+'/'+page,
 						type:'get',
 						dataType:'json',
 						success:function(data){

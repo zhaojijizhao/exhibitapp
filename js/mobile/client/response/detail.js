@@ -37,7 +37,7 @@ require(['../js/public/base.js'],function(Base){
 					var selfthis = this;
 					var self = this.$el;
 					$.ajax({
-						url: "http://121.43.62.242/api/offer/confirm/"+$(e.target).attr('oid'),
+						url: "http://121.43.62.242:3000/api/offer/confirm/"+$(e.target).attr('oid'),
 						type: "post",
 						data: {},
 						dataType:"json",

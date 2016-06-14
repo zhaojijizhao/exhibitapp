@@ -41,7 +41,7 @@ require(['../js/public/base.js'],function(Base){
 								(self.find("#search-projectname").val()||'nil');
 					}
 					$.ajax({
-						url:'http://121.43.62.242/api/offerhot/'+page,
+						url:'http://121.43.62.242:3000/api/offerhot/'+page,
 						type:'get',
 						dataType:'json',
 						success:function(data){

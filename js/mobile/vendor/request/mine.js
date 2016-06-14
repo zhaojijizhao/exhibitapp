@@ -34,7 +34,7 @@ require(['../js/public/base.js'],function(Base){
 				render:function(){
 					var selfthis = this;
 					$.ajax({
-						url:'http://121.43.62.242/api/exhibit/byvendorid/'+ this.user._id,
+						url:'http://121.43.62.242:3000/api/exhibit/byvendorid/'+ this.user._id,
 						type:'get',
 						dataType:'json',
 						success:function(data){

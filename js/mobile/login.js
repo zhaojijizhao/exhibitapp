@@ -36,7 +36,7 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242/api/clientlogin",
+						url: "http://121.43.62.242:3000/api/clientlogin",
 						type: "post",
 						data: data,
 						dataType:"json",
@@ -59,7 +59,7 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242/api/vendorlogin",
+						url: "http://121.43.62.242:3000/api/vendorlogin",
 						type: "post",
 						data: data,
 						dataType:"json",

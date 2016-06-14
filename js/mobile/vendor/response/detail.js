@@ -237,7 +237,7 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242/api/offer/"+self.find('#update').attr('oid'),
+						url: "http://121.43.62.242:3000/api/offer/"+self.find('#update').attr('oid'),
 						type: "put",
 						data: data,
 						dataType:"json",

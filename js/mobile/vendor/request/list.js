@@ -35,7 +35,7 @@ require(['../js/public/base.js'],function(Base){
 					var selfthis = this;
 					var page = $("#page").val()||1;
 					$.ajax({
-						url:'http://121.43.62.242/api/exhibit/list/'+page,
+						url:'http://121.43.62.242:3000/api/exhibit/list/'+page,
 						type:'get',
 						dataType:'json',
 						success:function(data){
