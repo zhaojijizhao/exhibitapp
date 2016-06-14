@@ -63,9 +63,9 @@ define(['jquery','underscore','backbone'],
 											<span class="f1"><%=v.info.name%></span>\
 											<%if(v.state==2){%>\
 												<span class="f1 red">已确认</span>\
-												<span class="fr w80 tc"><a class="orange" href="/mobile/result/<%=v.offer_id%>">查看报表</a></span>\
+												<span class="fr w80 tc"><a class="orange" href="mobile/result/<%=v.offer_id%>">查看报表</a></span>\
 											<%}%>\
-											<span class="fr w80 tc"><a class="detail" href="/mobile/client/request/detail/<%=v._id%>">查看详情</a></span>\
+											<span class="fr w80 tc"><a class="detail" href="mobile/client/request/detail/<%=v._id%>">查看详情</a></span>\
 										</li>\
 									<%});%>\
 								</ul>',
@@ -101,7 +101,7 @@ define(['jquery','underscore','backbone'],
 										<li>\
 											<span class="fl w50"><%=v.info.cname%></span>\
 											<span class="f1"><%=v.info.name%></span>\
-											<span class="fr w80 tc"><a class="detail" href="/mobile/vendor/request/detail/<%=v._id%>">查看详情</a></span>\
+											<span class="fr w80 tc"><a class="detail" href="mobile/vendor/request/detail/<%=v._id%>">查看详情</a></span>\
 										</li>\
 									<%});%>\
 								</ul>',
@@ -147,7 +147,7 @@ define(['jquery','underscore','backbone'],
 												<span class="f1">报价得分<br/>90分</span>\
 												<span class="f1">服务满意度<br/>90分</span>\
 												<span class="f1">报价<br/><span class="red"><%=v.total%></span>元</span>\
-												<span class="fr w80 tc"><a class="response" target="blank" href="/mobile/client/response/detail/<%=v._id%>" >查看详情</a></span>\
+												<span class="fr w80 tc"><a class="response" target="blank" href="mobile/client/response/detail/<%=v._id%>" >查看详情</a></span>\
 											</li>\
 										<%});%>\
 									<%}else{%>\
@@ -194,9 +194,9 @@ define(['jquery','underscore','backbone'],
 												<span class="f1">报价：<%=v.total%>元</span>\
 												<%if(v.state==2){%>\
 													<span class="f1 red">已确认</span>\
-													<span class="fr w80 tc"><a class="orange" href="/mobile/result/<%=v._id%>">查看报表</a></span>\
+													<span class="fr w80 tc"><a class="orange" href="mobile/result/<%=v._id%>">查看报表</a></span>\
 												<%}%>\
-												<span class="fr w80 tc"><a class="response" href="/mobile/vendor/response/detail/<%=v._id%>" >查看详情</a></span>\
+												<span class="fr w80 tc"><a class="response" href="mobile/vendor/response/detail/<%=v._id%>" >查看详情</a></span>\
 											</li>\
 										<%});%>\
 									<%}else{%>\
