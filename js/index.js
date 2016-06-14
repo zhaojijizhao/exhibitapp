@@ -44,7 +44,7 @@ var app = {
         // listeningElement.setAttribute('style', 'display:none;');
         // receivedElement.setAttribute('style', 'display:block;');
         
-        location.href="/mobile/index.html";
+        location.href="mobile/index.html";
         // console.log('Received Event: ' + id);
     }
 };
