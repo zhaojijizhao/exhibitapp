@@ -44,7 +44,7 @@ var app = {
         // listeningElement.setAttribute('style', 'display:none;');
         // receivedElement.setAttribute('style', 'display:block;');
         
-        location.href="http://121.43.62.242:3000/mobile/index";
+        location.href="/mobile/index.html";
         // console.log('Received Event: ' + id);
     }
 };
