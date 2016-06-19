@@ -36,14 +36,14 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242:3000/api/clientlogin",
+						url: Helper.requestUrl + "clientlogin",
 						type: "post",
 						data: data,
 						dataType:"json",
 						success:function(data){
 							alert("登录成功");
 							Helper.setlogin(data[0]);
-							location.href = "/mobile/index.html";
+							location.href = "../mobile/index.html";
 						},
 						error:function(){
 							alert("登录失败");
@@ -59,14 +59,14 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242:3000/api/vendorlogin",
+						url: Helper.requestUrl + "vendorlogin",
 						type: "post",
 						data: data,
 						dataType:"json",
 						success:function(data){
 							alert("登录成功");
 							Helper.setlogin(data[0]);
-							location.href = "/mobile/index.html";
+							location.href = "../mobile/index.html";
 						},
 						error:function(){
 							alert("登录失败");

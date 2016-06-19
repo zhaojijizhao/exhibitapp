@@ -17,7 +17,7 @@ require(['../js/public/base.js'],function(Base){
 						$("#exit").bind("click",function(e){
 							e.preventDefault();
 							Helper.deletelogin();
-							location.href="/mobile/index.html";
+							location.href="../mobile/index.html";
 						});
 						if(this.user.type=="client"){
 							$(".nav .vendor").remove();

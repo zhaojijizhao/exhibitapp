@@ -37,13 +37,13 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242:3000/api/clientuser",
+						url: Helper.requestUrl + "clientuser",
 						type: "post",
 						data: data,
 						dataType:'json',
 						success:function(data){
 							alert("注册成功");
-							location.href = "/mobile/login.html"
+							location.href = "../mobile/login.html"
 						},
 						error:function(){
 							alert("注册失败");
@@ -60,13 +60,13 @@ require(['../js/public/base.js'],function(Base){
 						}
 					};
 					$.ajax({
-						url: "http://121.43.62.242:3000/api/vendoruser",
+						url: Helper.requestUrl + "vendoruser",
 						type: "post",
 						data: data,
 						dataType:'json',
 						success:function(data){
 							alert("注册成功");
-							location.href = "/mobile/login.html"
+							location.href = "../mobile/login.html"
 						},
 						error:function(){
 							alert("注册失败");

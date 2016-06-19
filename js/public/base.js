@@ -1,6 +1,6 @@
 define([],function(){
-	function setRequirejs(){
-		requirejs.config({
+	function setRequirejs(type){
+		var config = {
 			baseUrl:"../",
 			paths:{
 				jquery:"lib/jquery",
@@ -17,7 +17,13 @@ define([],function(){
 					exports:'$'
 				}
 			}
-		});
+		};
+		
+		if(type == 1){
+			config.baseUrl = "../../../";
+		}
+
+		requirejs.config(config);
 	}
 	var base = {
 		setRequirejs:setRequirejs

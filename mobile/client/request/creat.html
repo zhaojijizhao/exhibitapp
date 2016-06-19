@@ -74,15 +74,6 @@
 							<div class="form-subpit">
 								<label>所在城市</label>
 								<select id="city" disable>
-									<% for(var i=0;i<city.length;i++){%>
-										<optgroup label="<%=city[i].label%>">
-											<% for(var j=0;j<city[i].cities.length;j++){%>
-												<option cid="<%=city[i].cities[j].id%>">
-													<%=city[i].cities[j].name%>
-												</option>
-											<%}%>
-										</optgroup>
-									<%}%>
 								</select>
 							</div>
 							<div class="form-subpit">
@@ -339,15 +330,6 @@
 					<div class="form-subpit">
 						<label>所在城市</label>
 						<select class="city" >
-							<% for(var i=0;i<city.length;i++){%>
-								<optgroup label="<%=city[i].label%>">
-									<% for(var j=0;j<city[i].cities.length;j++){%>
-										<option cid="<%=city[i].cities[j].id%>">
-											<%=city[i].cities[j].name%>
-										</option>
-									<%}%>
-								</optgroup>
-							<%}%>
 						</select>
 					</div>
 					<div class="form-subpit">
@@ -650,6 +632,17 @@
 				</div>
 			</div>
 		</div>
+	</script>
+	<script type="text/template" id="citytpl">
+		<% for(var i=0;i<city.length;i++){%>
+			<optgroup label="<%=city[i].label%>">
+				<% for(var j=0;j<city[i].cities.length;j++){%>
+					<option cid="<%=city[i].cities[j].id%>">
+						<%=city[i].cities[j].name%>
+					</option>
+				<%}%>
+			</optgroup>
+		<%}%>
 	</script>
 	<script type="text/javascript" defer async="true" data-main="../../../js/mobile/client/request/creat.js" src="../../../lib/require.js"></script>
 </body>
