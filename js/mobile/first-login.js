@@ -41,6 +41,7 @@ require(['../../js/public/base.js'],function(Base){
 						success:function(data){
 							alert("登录成功");
 							Helper.setlogin(data[0]);
+							localStorage.setItem('FIRSTTIME',true);
 							location.href = "../mobile/index.html";
 						},
 						error:function(){
