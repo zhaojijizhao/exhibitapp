@@ -1,7 +1,12 @@
-require(['../js/public/base.js'],function(Base){
+require(['../../js/public/base.js'],function(Base){
 	Base.setRequirejs();
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
+
+			if(!localStorage.getItem("FIRSTTIME")){
+				location.href = "./first-index.html";
+			}
+
 			var view = Backbone.View.extend({
 				initialize:function(){
 					$("#slideout").on('click',function(){
@@ -14,7 +19,7 @@ require(['../js/public/base.js'],function(Base){
 						this.user = Helper.getlogin();
 						var temp = _.template(Helper.template.mobileLoginTemplate);
 						$(".toplink").html(temp(this.user));
-						$("#exit").bind("click",function(e){
+						$("#exit").on("click",function(e){
 							e.preventDefault();
 							Helper.deletelogin();
 							location.href="../mobile/index.html";

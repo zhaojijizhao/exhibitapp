@@ -1,4 +1,4 @@
-require(['../../../js/public/base.js'],function(Base){
+require(['../../../../js/public/base.js'],function(Base){
 	Base.setRequirejs(1);
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
@@ -22,7 +22,7 @@ require(['../../../js/public/base.js'],function(Base){
 					var temp = _.template(Helper.template.mobileLoginTemplate);
 					$(".nav .client").remove();
 					$(".toplink").html(temp(this.user));
-					$("#exit").bind("click",function(e){
+					$("#exit").on("click",function(e){
 						e.preventDefault();
 						Helper.deletelogin();
 						location.href="../../../mobile/index.html";

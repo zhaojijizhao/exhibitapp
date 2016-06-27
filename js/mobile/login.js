@@ -1,4 +1,4 @@
-require(['../js/public/base.js'],function(Base){
+require(['../../js/public/base.js'],function(Base){
 	Base.setRequirejs();
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
@@ -12,7 +12,7 @@ require(['../js/public/base.js'],function(Base){
 					})
 					Helper.deletelogin();
 					$(".nav .client,.nav .vendor").remove();
-					$('.toptab li').bind("click",function(){
+					$('.toptab li').on("click",function(){
 						var i = $(this).index();
 						$('.toptab li').removeClass('on');
 						$(this).addClass('on');
