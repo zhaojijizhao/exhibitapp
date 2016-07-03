@@ -4,7 +4,7 @@ require(['../../js/public/base.js'],function(Base){
 		function($,_,Backbone,Helper){
 
 			if(!localStorage.getItem("FIRSTTIME")){
-				location.href = "./first-index.html";
+				location.href = "./first-login.html";
 			}
 
 			var view = Backbone.View.extend({
