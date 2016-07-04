@@ -3,7 +3,8 @@ require(['../../js/public/base.js'],function(Base){
 	require(['jquery','underscore','backbone','helper'],
 		function($,_,Backbone,Helper){
 
-			if(!localStorage.getItem("FIRSTTIME")){
+			if(!localStorage.getItem("FIRSTTIMEv1")){
+				localStorage.clear();
 				location.href = "./first-login.html";
 			}
 
