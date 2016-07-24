@@ -9,6 +9,7 @@ define([],function(){
 				angular:"lib/angular/angular.min",
 				bootstrap:"lib/bootstrap/dist/js/bootstrap.min",
 				text:"lib/text/text",
+				pingpp:"lib/pingpp_one",
 				public:'js/public',
 				client:'js/client',
 				vendor:'js/vendor',
@@ -21,6 +22,9 @@ define([],function(){
 				'bootstrap':{
 					deps: ['jquery'],
 					exports: 'bs'
+				},
+				'pingpp':{
+					exports:'ping'
 				}
 			}
 		};
